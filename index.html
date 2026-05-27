@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trumpeality — A New Word for Our Times</title>
+  <meta name="description" content="Trumpeality (n.) — A distorted version of reality, constructed through selective facts, repetition, and absolute conviction, where perception and self-interest consistently override objective truth.">
+  <meta property="og:title" content="Trumpeality — A New Word for Our Times">
+  <meta property="og:description" content="A distorted version of reality, constructed through selective facts, repetition, and absolute conviction, where perception and self-interest consistently override objective truth.">
+  <meta property="og:url" content="https://trumpeality.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@trumpeality">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --text-primary: #1a1a18;
+      --text-secondary: #5a5a54;
+      --border-primary: #1a1a18;
+      --border-light: #d0cec6;
+      --bg: #f5f2eb;
+      --bg-page: #ede9e0;
+    }
+
+    body {
+      background: var(--bg-page);
+      color: var(--text-primary);
+      font-family: 'IM Fell English', Georgia, serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .page {
+      background: var(--bg);
+      max-width: 720px;
+      width: 100%;
+      border-left: 1px solid var(--border-light);
+      border-right: 1px solid var(--border-light);
+      box-shadow: 0 2px 40px rgba(0,0,0,0.12);
+    }
+
+    .masthead {
+      border-top: 5px solid var(--border-primary);
+      border-bottom: 1px solid var(--border-primary);
+      text-align: center;
+      padding: 2rem 2rem 1.25rem;
+    }
+
+    .masthead-label {
+      font-size: 11px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead-title {
+      font-family: 'UnifrakturMaguntia', cursive;
+      font-size: 72px;
+      line-height: 1;
+      color: var(--text-primary);
+      letter-spacing: 0.02em;
+    }
+
+    .masthead-subtitle {
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-top: 0.6rem;
+    }
+
+    .divider-thick {
+      border: none;
+      border-top: 3px double var(--border-primary);
+    }
+
+    .main-content {
+      padding: 2.5rem 2.5rem 1.5rem;
+    }
+
+    .entry-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.25rem;
+    }
+
+    .entry-word {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .entry-pronunciation {
+      font-style: italic;
+      font-size: 17px;
+      color: var(--text-secondary);
+    }
+
+    .entry-pos {
+      font-size: 14px;
+      font-style: italic;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.04em;
+    }
+
+    .entry-definition {
+      font-size: 19px;
+      line-height: 1.8;
+      border-left: 3px solid var(--text-primary);
+      padding-left: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .entry-etymology {
+      font-size: 14px;
+      color: var(--text-secondary);
+      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: 1.75rem;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      display: block;
+      margin-bottom: 0.6rem;
+      font-style: normal;
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--border-light);
+      margin: 0 0 1.75rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .col-rule {
+      background: var(--border-light);
+    }
+
+    .example {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      padding-left: 1rem;
+      border-left: 1px solid var(--border-light);
+    }
+
+    .related-words {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .related-word {
+      font-style: italic;
+      font-size: 15px;
+      border-bottom: 1px solid var(--text-secondary);
+      padding-bottom: 1px;
+      color: var(--text-primary);
+    }
+
+    .urban-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-style: italic;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-light);
+      padding: 5px 12px;
+      border-radius: 2px;
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .urban-badge:hover {
+      color: var(--text-primary);
+      border-color: var(--border-primary);
+    }
+
+    .footer-bar {
+      border-top: 3px double var(--border-primary);
+      border-bottom: 5px solid var(--border-primary);
+      padding: 1rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-link {
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.15s;
+    }
+
+    .footer-link:hover {
+      color: var(--text-primary);
+    }
+
+    .footer-date {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    @media (max-width: 520px) {
+      .masthead-title { font-size: 52px; }
+      .entry-word { font-size: 36px; }
+      .main-content { padding: 1.5rem 1.25rem 1rem; }
+      .footer-bar { padding: 1rem 1.25rem; }
+      .two-col { grid-template-columns: 1fr; }
+      .col-rule { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="masthead">
+      <div class="masthead-label">The Definitive Record</div>
+      <h1 class="masthead-title">Trumpeality</h1>
+      <div class="masthead-subtitle">A New Word for Our Times &nbsp;&middot;&nbsp; Est. May 2026</div>
+    </div>
+    <hr class="divider-thick">
+
+    <div class="main-content">
+      <div class="entry-header">
+        <span class="entry-word">Trumpeality</span>
+        <span class="entry-pronunciation">/ trump&middot;ee&middot;al&middot;i&middot;tee /</span>
+      </div>
+      <div class="entry-pos">noun &nbsp;&middot;&nbsp; coined 2026</div>
+
+      <div class="entry-definition">
+        A distorted version of reality, constructed through selective facts, repetition, and absolute conviction, where perception and self-interest consistently override objective truth. Applicable in politics, business, and beyond.
+      </div>
+
+      <div class="entry-etymology">
+        <span class="section-label">Origin</span>
+        Portmanteau of <em>Trump</em> and <em>reality</em>. Coined May 2026. Modelled after <em>whataboutism</em> &mdash; a word that entered common usage to describe a recognisable but previously unnamed phenomenon. Trumpeality serves the same purpose: to name the gap between proclaimed reality and demonstrable fact.
+      </div>
+
+      <hr class="divider">
+
+      <div class="two-col">
+        <div>
+          <span class="section-label">In politics</span>
+          <div class="example">"He declared the ceasefire a triumph. Twenty soldiers died after it was signed. That is not spin &mdash; that is Trumpeality."</div>
+        </div>
+        <div class="col-rule"></div>
+        <div>
+          <span class="section-label">In business</span>
+          <div class="example">"The CFO called it a record quarter. The auditors called it something else. A textbook case of corporate Trumpeality."</div>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <span class="section-label">Related forms</span>
+      <div class="related-words">
+        <span class="related-word">Trumpealist</span>
+        <span class="related-word">Trumpealism</span>
+        <span class="related-word">Trumpealistic</span>
+      </div>
+
+      <a class="urban-badge" href="https://www.urbandictionary.com/define.php?term=Trumpeality" target="_blank" rel="noopener">
+        &#128218; Also listed on Urban Dictionary
+      </a>
+    </div>
+
+    <div class="footer-bar">
+      <div class="footer-links">
+        <a class="footer-link" href="https://x.com/trumpeality" target="_blank" rel="noopener">&#120143; &nbsp;@Trumpeality</a>
+        <a class="footer-link" href="https://www.urbandictionary.com/define.php?term=Trumpeality" target="_blank" rel="noopener">&#8599; Urban Dictionary</a>
+      </div>
+      <div class="footer-date">Coined &middot; May 2026 &middot; Tel Aviv</div>
+    </div>
+  </div>
+</body>
+</html>
