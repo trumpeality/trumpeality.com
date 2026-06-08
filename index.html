@@ -202,6 +202,76 @@
       border-color: var(--border-primary);
     }
 
+    .archive-section {
+      border-top: 3px double var(--border-primary);
+      padding: 2rem 2.5rem;
+    }
+
+    .archive-header {
+      text-align: center;
+      margin-bottom: 1.75rem;
+    }
+
+    .archive-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .archive-subtitle {
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    .archive-entry {
+      border-bottom: 1px solid var(--border-light);
+      padding: 1.5rem 0;
+    }
+
+    .archive-entry:last-child {
+      border-bottom: none;
+    }
+
+    .archive-date {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 0.6rem;
+    }
+
+    .archive-tweet {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .archive-source {
+      font-size: 12px;
+      font-style: italic;
+      color: var(--text-secondary);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.15s;
+    }
+
+    .archive-source:hover {
+      color: var(--text-primary);
+    }
+
+    .archive-empty {
+      text-align: center;
+      font-style: italic;
+      color: var(--text-secondary);
+      padding: 2rem 0;
+      font-size: 14px;
+    }
+
     .footer-bar {
       border-top: 3px double var(--border-primary);
       border-bottom: 5px solid var(--border-primary);
@@ -241,6 +311,7 @@
       .masthead-title { font-size: 52px; }
       .entry-word { font-size: 36px; }
       .main-content { padding: 1.5rem 1.25rem 1rem; }
+      .archive-section { padding: 1.5rem 1.25rem; }
       .footer-bar { padding: 1rem 1.25rem; }
       .two-col { grid-template-columns: 1fr; }
       .col-rule { display: none; }
@@ -269,7 +340,7 @@
 
       <div class="entry-etymology">
         <span class="section-label">Origin</span>
-        Portmanteau of <em>Trump</em> and <em>reality</em>. Coined May 2026. Modelled after <em>whataboutism</em> &mdash; a word that entered common usage to describe a recognisable but previously unnamed phenomenon. Trumpeality serves the same purpose: to name the gap between proclaimed reality and demonstrable fact.
+        Portmanteau of <em>Trump</em> and <em>reality</em>. Born from the growing realisation that truth itself has become subjective &mdash; that what is real and what is fake has become genuinely hard to tell apart. World leaders and billionaires have weaponised this confusion as a tool to serve their self-interests, often at the expense of truth itself. Trumpeality names a phenomenon people already recognise but had no word for. If Truth lives in its own dimension, Trumpeality is the alternative dimension that runs parallel to it.
       </div>
 
       <hr class="divider">
@@ -298,6 +369,17 @@
       <a class="urban-badge" href="https://www.urbandictionary.com/define.php?term=Trumpeality" target="_blank" rel="noopener">
         &#128218; Also listed on Urban Dictionary
       </a>
+    </div>
+
+    <div class="archive-section">
+      <div class="archive-header">
+        <div class="archive-title">In the Wild</div>
+        <div class="archive-subtitle">Trumpeality in Recent Headlines</div>
+      </div>
+
+      <!--ARCHIVE_START-->
+      <div class="archive-empty">The first entries will appear here as the word is observed in the world.</div>
+      <!--ARCHIVE_END-->
     </div>
 
     <div class="footer-bar">
