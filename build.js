@@ -50,8 +50,15 @@ function escapeHtml(text) {
       return;
     }
     
-    const rows = sheetData.table.rows;
-    const headers = sheetData.table.cols.map(c => c.label);
+    let rows = sheetData.table.rows;
+let headers = sheetData.table.cols.map(c => c.label);
+
+// If headers are empty, use the first row as headers
+if (headers.every(h => !h || h === '')) {
+  headers = rows[0].c.map(c => c?.v || '');
+  rows = rows.slice(1);
+  console.log('Using first row as headers:', headers);
+}
     
     console.log('Headers:', headers);
     console.log('Total rows:', rows ? rows.length : 0);
