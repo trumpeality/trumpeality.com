@@ -2,7 +2,7 @@ const https = require('https');
 const fs = require('fs');
 
 const SHEET_ID = '1JYmSI7r2TlIgH9lj8-S_m6wQ_icLpMOK-CBqew8bmwE';
-const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json`;
+const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&headers=1`;
 
 function fetchSheet() {
   return new Promise((resolve, reject) => {
