@@ -81,7 +81,7 @@ function escapeHtml(text) {
         source: r.c[sourceIdx]?.v,
         analysis: r.c[analysisIdx]?.v
       }))
-      .filter(e => e.tweet && e.tweet.length > 20)
+      .filter(e => e.tweet && e.tweet.length > 20 && !e.tweet.toUpperCase().includes('NO_TWEET') && !e.tweet.toUpperCase().includes('NO TWEET'))
       .reverse();
     
     console.log('Filtered entries count:', entries.length);
